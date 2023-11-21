@@ -1,4 +1,4 @@
-package baseball.view;
+package baseball.view.message;
 
 public enum InputMessage {
     INPUT_ANSWER("숫자를 입력해주세요 : "),

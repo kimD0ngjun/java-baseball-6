@@ -1,13 +1,9 @@
-package baseball.view;
+package baseball.view.input;
 
+import baseball.view.message.InputMessage;
 import camp.nextstep.edu.missionutils.Console;
 
-public class InputValue {
-    public static String inputAnswer() {
-        System.out.print(InputMessage.INPUT_ANSWER);
-        return Console.readLine();
-    }
-
+public class InputProgress {
     public static String inputProgress() {
         System.out.println(InputMessage.INPUT_PROGRESS);
         return Console.readLine();

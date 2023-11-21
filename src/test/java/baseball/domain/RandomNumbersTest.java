@@ -30,4 +30,19 @@ public class RandomNumbersTest {
             assertThat(number).isBetween(1, 9);
         }
     }
+
+    @DisplayName("닌수 단위는 서로 중복이 아니다.")
+    @Test
+    void testDuplicatesOfRandomNumbers() {
+        int size = testRandomNumbers.size();
+        for (int i = 0; i < size - 1; i++) {
+            checkDuplicatesOfRandomNumber(i);
+        }
+    }
+
+    void checkDuplicatesOfRandomNumber(int index) {
+        for (int j = index + 1; j < testRandomNumbers.size(); j++) {
+            assertThat(testRandomNumbers.get(index)).isNotEqualTo(testRandomNumbers.get(j));
+        }
+    }
 }

@@ -32,4 +32,14 @@ public class UserNumbersTest {
             assertThatThrownBy(() -> new UserNumbers(wrongCase));
         }
     }
+
+    @DisplayName("문자열 입력값 길이가 3이 아니면 예외 처리한다.")
+    @Test
+    void testLength() {
+        String[] wrongCases = {"12", "1234", "1"};
+
+        for (String wrongCase : wrongCases) {
+            assertThatThrownBy(() -> new UserNumbers(wrongCase));
+        }
+    }
 }

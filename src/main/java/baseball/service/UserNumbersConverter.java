@@ -27,7 +27,7 @@ public class UserNumbersConverter {
     }
 
     // validate
-    private static void validate(String inputNumbers) {
+    public static void validate(String inputNumbers) {
         checkLength(inputNumbers);
         validateInputValue(inputNumbers);
     }

@@ -42,4 +42,14 @@ public class UserNumbersTest {
             assertThatThrownBy(() -> new UserNumbers(wrongCase));
         }
     }
+
+    @DisplayName("문자열 입력값 타입 변환 문자값이 숫자(Integer)가 아니면 예외 처리한다.")
+    @Test
+    void testNumberType() {
+        String[] wrongCases = {"12가", "-13", "12a"};
+
+        for (String wrongCase : wrongCases) {
+            assertThatThrownBy(() -> new UserNumbers(wrongCase));
+        }
+    }
 }

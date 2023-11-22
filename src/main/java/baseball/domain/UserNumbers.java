@@ -30,7 +30,7 @@ public class UserNumbers {
             char unitCharacter = inputNumber.charAt(i);
 
             int digit = Character.getNumericValue(unitCharacter);
-            validateNumber(digit);
+            validateNumberType(digit);
 
             resultList.add(digit);
         }
@@ -54,7 +54,7 @@ public class UserNumbers {
     }
 
     //Is its type a number?
-    private void validateNumber(int digit) {
+    private void validateNumberType(int digit) {
         if (digit == NOT_NUMBER) {
             throw new IllegalArgumentException();
         }

@@ -10,6 +10,11 @@ public class UserNumbers {
         this.userNumbers = changeType(inputNumber);
     }
 
+    // for test-code and encapsulation
+    public List<Integer> getUserNumbers() {
+        return userNumbers;
+    }
+
     // type change
     private List<Integer> changeType(String inputNumber) {
         List<Integer> resultList = new ArrayList<>();

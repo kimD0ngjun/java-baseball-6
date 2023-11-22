@@ -10,8 +10,9 @@ public class Strike extends Counter {
     protected int calculateCount() {
         int count = 0;
 
-        for (int i = 0; i < userNumbers.size(); i++) {
-            if (userNumbers.get(i).equals(randomNumbers.get(i))) {
+        for (int i = 0; i < super.randomNumbers.size(); i++) {
+            int userNumber = super.userNumbers.get(i);
+            if (super.randomNumbers.get(i).equals(userNumber)) {
                 count++;
             }
         }

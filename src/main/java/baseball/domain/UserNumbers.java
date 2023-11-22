@@ -21,6 +21,7 @@ public class UserNumbers {
     // type change
     private List<Integer> changeType(String inputNumber) {
         validateBlank(inputNumber);
+        validateLength(inputNumber);
 
         List<Integer> resultList = new ArrayList<>();
 
@@ -43,6 +44,11 @@ public class UserNumbers {
     }
 
     //TODO Is its length 3?
+    private void validateLength(String inputNumbers) {
+        if (inputNumbers.length() != 3) {
+            throw new IllegalArgumentException();
+        }
+    }
 
     //TODO Is its type a number?
 

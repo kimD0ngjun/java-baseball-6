@@ -5,7 +5,7 @@ import camp.nextstep.edu.missionutils.Console;
 
 public class InputAnswer {
     public static String inputAnswer() {
-        System.out.print(InputMessage.INPUT_ANSWER);
+        System.out.print(InputMessage.INPUT_ANSWER.getMessage());
         return Console.readLine();
     }
 }

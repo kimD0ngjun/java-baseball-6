@@ -13,6 +13,11 @@ public class Counter {
         this.randomNumbers = randomNumbers.getRandomNumbers();
     }
 
+    // for test-code and encapsulation
+    public int getCount() {
+        return count;
+    }
+
     protected int calculateCount() {
         return 0;
     }

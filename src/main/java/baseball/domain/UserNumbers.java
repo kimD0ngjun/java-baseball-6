@@ -42,7 +42,9 @@ public class UserNumbers {
         }
     }
 
-    //TODO Is it's type a number?
+    //TODO Is its length 3?
 
-    //TODO Is it's range between 1 and 9?
+    //TODO Is its type a number?
+
+    //TODO Is its range between 1 and 9?
 }

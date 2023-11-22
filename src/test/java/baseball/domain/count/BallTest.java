@@ -1,9 +1,11 @@
-package baseball.domain;
+package baseball.domain.count;
 
 import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.when;
 
+import baseball.domain.RandomNumbers;
+import baseball.domain.UserNumbers;
 import java.util.Arrays;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.DisplayName;
@@ -27,7 +29,7 @@ public class BallTest {
             UserNumbers userNumbers = new UserNumbers(caseString);
 
             Ball ball = new Ball(userNumbers, randomNumbers);
-            assertThat(ball.count).isEqualTo(0);
+            assertThat(ball.getCount()).isEqualTo(0);
         }
     }
 
@@ -40,7 +42,7 @@ public class BallTest {
             UserNumbers userNumbers = new UserNumbers(caseString);
 
             Ball ball = new Ball(userNumbers, randomNumbers);
-            assertThat(ball.count).isEqualTo(1);
+            assertThat(ball.getCount()).isEqualTo(1);
         }
     }
 
@@ -53,7 +55,7 @@ public class BallTest {
             UserNumbers userNumbers = new UserNumbers(caseString);
 
             Ball ball = new Ball(userNumbers, randomNumbers);
-            assertThat(ball.count).isEqualTo(2);
+            assertThat(ball.getCount()).isEqualTo(2);
         }
     }
 
@@ -66,7 +68,7 @@ public class BallTest {
             UserNumbers userNumbers = new UserNumbers(caseString);
 
             Ball ball = new Ball(userNumbers, randomNumbers);
-            assertThat(ball.count).isEqualTo(3);
+            assertThat(ball.getCount()).isEqualTo(3);
         }
     }
 }

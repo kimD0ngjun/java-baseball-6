@@ -45,4 +45,14 @@ public class UserValidatorTest {
             assertThatThrownBy(() -> UserValidator.validate(wrongCase));
         }
     }
+
+    @DisplayName("중복된 숫자를 입력하면 예외 처리한다.")
+    @Test
+    void testDuplicates() {
+        String[] wrongCases = {"122", "333", "646"};
+
+        for (String wrongCase : wrongCases) {
+            assertThatThrownBy(() -> UserValidator.checkForDuplicates(wrongCase));
+        }
+    }
 }

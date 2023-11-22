@@ -52,4 +52,14 @@ public class UserNumbersTest {
             assertThatThrownBy(() -> new UserNumbers(wrongCase));
         }
     }
+
+    @DisplayName("문자열 입력값 타입 변환 문자값의 범위는 1부터 9까지다.")
+    @Test
+    void testNumberRange() {
+        String[] wrongCases = {"120", "103", "085"};
+
+        for (String wrongCase : wrongCases) {
+            assertThatThrownBy(() -> new UserNumbers(wrongCase));
+        }
+    }
 }

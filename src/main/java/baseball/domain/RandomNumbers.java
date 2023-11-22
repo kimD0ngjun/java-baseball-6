@@ -29,6 +29,7 @@ public class RandomNumbers {
 
     private boolean hasDuplicates(List<Integer> numbers) {
         Set<Integer> set = new HashSet<>();
+
         for (int num : numbers) {
             if (!set.add(num)) {
                 return true;

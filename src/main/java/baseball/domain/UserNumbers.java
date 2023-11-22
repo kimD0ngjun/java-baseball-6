@@ -2,9 +2,12 @@ package baseball.domain;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.regex.Pattern;
 
 public class UserNumbers {
     private final List<Integer> userNumbers;
+
+    private final String CHECK_BLANK = "^[0-9|a-z|A-Z|ㄱ-ㅎ|ㅏ-ㅣ|가-힣]*$";
 
     public UserNumbers(String inputNumber) {
         this.userNumbers = changeType(inputNumber);
@@ -17,6 +20,8 @@ public class UserNumbers {
 
     // type change
     private List<Integer> changeType(String inputNumber) {
+        validateBlank(inputNumber);
+
         List<Integer> resultList = new ArrayList<>();
 
         for (int i = 0; i < inputNumber.length(); i++) {
@@ -30,4 +35,14 @@ public class UserNumbers {
     }
 
     // validate
+    //TODO Doesn't it have blank?
+    private void validateBlank(String inputNumbers) {
+        if (!Pattern.matches(CHECK_BLANK, inputNumbers) || inputNumbers.isBlank()) {
+            throw new IllegalArgumentException();
+        }
+    }
+
+    //TODO Is it's type a number?
+
+    //TODO Is it's range between 1 and 9?
 }

@@ -1,6 +1,6 @@
 package baseball.service;
 
-import baseball.utility.UserValidator;
+import baseball.utility.UserNumbersValidator;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -11,7 +11,7 @@ public class UserNumbersConverter {
     }
 
     public static List<Integer> changeType(String inputNumber) {
-        UserValidator.validate(inputNumber);
+        UserNumbersValidator.validate(inputNumber);
         List<Integer> resultList = new ArrayList<>();
 
         for (int i = 0; i < inputNumber.length(); i++) {

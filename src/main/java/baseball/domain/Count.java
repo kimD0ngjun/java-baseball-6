@@ -1,9 +1,9 @@
 package baseball.domain;
 
 public class Count {
-    private int count;
-    private UserNumbers userNumbers;
-    private RandomNumbers randomNumbers;
+    protected int count;
+    protected UserNumbers userNumbers;
+    protected RandomNumbers randomNumbers;
 
     public Count(UserNumbers userNumbers, RandomNumbers randomNumbers) {
         this.count = 0;
@@ -11,7 +11,7 @@ public class Count {
         this.randomNumbers = randomNumbers;
     }
 
-    public void increment() {
+    protected void increment() {
         this.count++;
     }
 }

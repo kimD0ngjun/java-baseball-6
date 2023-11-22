@@ -5,14 +5,14 @@ import static org.assertj.core.api.AssertionsForClassTypes.assertThatThrownBy;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
-public class UserValidatorTest {
+public class UserNumbersValidatorTest {
     @DisplayName("문자열 입력값에 공백을 포함하면 예외 처리한다.")
     @Test
     void testBlank() {
         String[] wrongCases = {"", " ", "123 ", " 123", "1 23", "1 23"};
 
         for (String wrongCase : wrongCases) {
-            assertThatThrownBy(() -> UserValidator.validate(wrongCase));
+            assertThatThrownBy(() -> UserNumbersValidator.validate(wrongCase));
         }
     }
 
@@ -22,7 +22,7 @@ public class UserValidatorTest {
         String[] wrongCases = {"12", "1234", "1"};
 
         for (String wrongCase : wrongCases) {
-            assertThatThrownBy(() -> UserValidator.validate(wrongCase));
+            assertThatThrownBy(() -> UserNumbersValidator.validate(wrongCase));
         }
     }
 
@@ -32,7 +32,7 @@ public class UserValidatorTest {
         String[] wrongCases = {"12가", "-13", "12a"};
 
         for (String wrongCase : wrongCases) {
-            assertThatThrownBy(() -> UserValidator.validate(wrongCase));
+            assertThatThrownBy(() -> UserNumbersValidator.validate(wrongCase));
         }
     }
 
@@ -42,7 +42,7 @@ public class UserValidatorTest {
         String[] wrongCases = {"120", "103", "085"};
 
         for (String wrongCase : wrongCases) {
-            assertThatThrownBy(() -> UserValidator.validate(wrongCase));
+            assertThatThrownBy(() -> UserNumbersValidator.validate(wrongCase));
         }
     }
 
@@ -52,7 +52,7 @@ public class UserValidatorTest {
         String[] wrongCases = {"122", "333", "646"};
 
         for (String wrongCase : wrongCases) {
-            assertThatThrownBy(() -> UserValidator.checkForDuplicates(wrongCase));
+            assertThatThrownBy(() -> UserNumbersValidator.checkForDuplicates(wrongCase));
         }
     }
 }

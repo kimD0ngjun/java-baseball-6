@@ -4,12 +4,12 @@ import java.util.HashSet;
 import java.util.Set;
 import java.util.regex.Pattern;
 
-public class UserValidator {
+public class UserNumbersValidator {
     private static final String VALIDATE = "^[1-9]*$";
     private static final int LENGTH = 3;
 
     // to prevent instantiation
-    private UserValidator() {
+    private UserNumbersValidator() {
     }
 
     // validate

@@ -41,6 +41,10 @@ public class EventAssembler {
 
                 Output output = new OutputValue();
                 output.outputCount(dto);
+
+                if (strikeCount == 3) {
+                    System.out.println(GuideMessage.END_MESSAGE.getMessage());
+                }
             } while (strikeCount != 3);
 
             Input progress = new Progress();

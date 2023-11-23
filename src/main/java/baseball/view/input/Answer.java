@@ -3,10 +3,10 @@ package baseball.view.input;
 import baseball.view.message.InputMessage;
 import camp.nextstep.edu.missionutils.Console;
 
-public class InputAnswer {
-    // static 지양하기
+public class Answer implements Input {
 
-    public static String inputAnswer() {
+    @Override
+    public String inputValue() {
         System.out.print(InputMessage.INPUT_ANSWER.getMessage());
         return Console.readLine();
     }

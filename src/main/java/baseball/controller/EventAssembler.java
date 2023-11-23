@@ -2,7 +2,8 @@ package baseball.controller;
 
 import baseball.domain.entity.numbers.RandomNumbers;
 import baseball.domain.entity.numbers.UserNumbers;
-import baseball.view.input.InputAnswer;
+import baseball.view.input.Answer;
+import baseball.view.input.Input;
 import baseball.view.message.GuideMessage;
 
 public class EventAssembler {
@@ -11,7 +12,7 @@ public class EventAssembler {
 
         RandomNumbers question = new RandomNumbers();
 
-        String inputNumbers = InputAnswer.inputAnswer();
-        UserNumbers userNumbers = new UserNumbers(inputNumbers);
+        Input answer = new Answer();
+        UserNumbers userNumbers = new UserNumbers(answer.inputValue());
     }
 }

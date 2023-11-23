@@ -40,7 +40,7 @@ public class UserNumbersValidator {
     }
 
     //Is its length 3?
-    private static void checkLength(String inputNumbers) {
+    public static void checkLength(String inputNumbers) {
         if (inputNumbers.length() != LENGTH) {
             throw new IllegalArgumentException();
         }

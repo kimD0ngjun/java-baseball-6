@@ -12,6 +12,7 @@ public class OutputValue implements Output {
     }
 
     private void outputResult(int ball, int strike) {
+        outputNothing(ball, strike);
         outputBall(ball, strike);
         outputStrike(ball, strike);
         outputBallStrike(ball, strike);

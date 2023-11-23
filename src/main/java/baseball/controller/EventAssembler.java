@@ -1,5 +1,7 @@
 package baseball.controller;
 
+import static baseball.utility.ProgressValidator.validateProgress;
+
 import baseball.domain.dto.CountDto;
 import baseball.domain.entity.count.Ball;
 import baseball.domain.entity.count.Count;
@@ -42,6 +44,7 @@ public class EventAssembler {
             } while (strikeCount != 3);
 
             Input progress = new Progress();
+            validateProgress(progress.inputValue());
             progressNumber = Integer.parseInt(progress.inputValue());
         } while (progressNumber != 2);
     }

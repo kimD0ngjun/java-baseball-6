@@ -4,7 +4,7 @@ import baseball.domain.dto.CountDto;
 import baseball.domain.entity.numbers.Numbers;
 import java.util.List;
 
-public class Strike implements Counter {
+public class Strike implements Count {
     private List<Integer> userNumbers;
     private List<Integer> randomNumbers;
 

@@ -13,20 +13,28 @@ import baseball.view.output.Output;
 import baseball.view.output.OutputValue;
 
 public class EventAssembler {
+    private int ballCount;
+    private int strikeCount;
+
     public void startBaseball() {
         System.out.println(GuideMessage.START_MESSAGE.getMessage());
 
         RandomNumbers randomNumbers = new RandomNumbers();
 
-        Input answer = new Answer();
-        UserNumbers userNumbers = new UserNumbers(answer.inputValue());
+        do {
+            Input answer = new Answer();
+            UserNumbers userNumbers = new UserNumbers(answer.inputValue());
 
-        Count ball = new Ball(userNumbers, randomNumbers);
-        Count strike = new Strike(userNumbers, randomNumbers);
+            Count ball = new Ball(userNumbers, randomNumbers);
+            Count strike = new Strike(userNumbers, randomNumbers);
 
-        CountDto dto = new CountDto(ball.calculateCount().getBall(), strike.calculateCount().getStrike());
+            ballCount = ball.calculateCount().getBall();
+            strikeCount = strike.calculateCount().getStrike();
 
-        Output output = new OutputValue();
-        output.outputCount(dto);
+            CountDto dto = new CountDto(ballCount, strikeCount);
+
+            Output output = new OutputValue();
+            output.outputCount(dto);
+        } while (strikeCount != 3);
     }
 }

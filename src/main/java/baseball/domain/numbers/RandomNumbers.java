@@ -10,7 +10,7 @@ public class RandomNumbers {
     private final List<Integer> randomNumbers;
 
     public RandomNumbers() {
-        this.randomNumbers = generateRandomNumbers();
+        this.randomNumbers = generateNumbers();
     }
 
     // for test-code and encapsulation
@@ -18,7 +18,7 @@ public class RandomNumbers {
         return randomNumbers;
     }
 
-    private List<Integer> generateRandomNumbers() {
+    private List<Integer> generateNumbers() {
         List<Integer> randomNumbers;
         do {
             randomNumbers = new ArrayList<>(Randoms.pickUniqueNumbersInRange(1, 9, 3));

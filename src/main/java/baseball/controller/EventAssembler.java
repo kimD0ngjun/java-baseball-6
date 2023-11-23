@@ -1,7 +1,7 @@
 package baseball.controller;
 
-import baseball.domain.RandomNumbers;
-import baseball.domain.UserNumbers;
+import baseball.domain.numbers.RandomNumbers;
+import baseball.domain.numbers.UserNumbers;
 import baseball.view.input.InputAnswer;
 import baseball.view.message.GuideMessage;
 

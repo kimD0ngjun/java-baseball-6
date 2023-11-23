@@ -2,6 +2,7 @@ package baseball.domain;
 
 import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
 
+import baseball.domain.numbers.RandomNumbers;
 import java.util.List;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.DisplayName;

@@ -1,7 +1,7 @@
 package baseball.domain.count;
 
-import baseball.domain.RandomNumbers;
-import baseball.domain.UserNumbers;
+import baseball.domain.numbers.RandomNumbers;
+import baseball.domain.numbers.UserNumbers;
 import java.util.List;
 
 public class Strike implements Counter {

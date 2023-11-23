@@ -1,4 +1,4 @@
-package baseball.domain;
+package baseball.domain.numbers;
 
 import static baseball.utility.RandomNumbersValidator.checkDuplicates;
 

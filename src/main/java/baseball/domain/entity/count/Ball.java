@@ -1,6 +1,6 @@
-package baseball.domain.count;
+package baseball.domain.entity.count;
 
-import baseball.domain.numbers.Numbers;
+import baseball.domain.entity.numbers.Numbers;
 import java.util.List;
 
 public class Ball implements Counter {

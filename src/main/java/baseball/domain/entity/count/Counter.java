@@ -1,4 +1,4 @@
-package baseball.domain.count;
+package baseball.domain.entity.count;
 
 public interface Counter {
     int getCount();

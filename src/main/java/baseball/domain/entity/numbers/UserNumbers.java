@@ -1,4 +1,4 @@
-package baseball.domain.numbers;
+package baseball.domain.entity.numbers;
 
 import baseball.service.UserNumbersConverter;
 import java.util.List;

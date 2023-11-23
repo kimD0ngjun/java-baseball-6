@@ -2,6 +2,7 @@ package baseball.domain.numbers;
 
 import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
 
+import baseball.domain.entity.numbers.UserNumbers;
 import java.util.ArrayList;
 import java.util.List;
 import org.junit.jupiter.api.DisplayName;

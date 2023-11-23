@@ -4,8 +4,9 @@ import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.when;
 
-import baseball.domain.numbers.RandomNumbers;
-import baseball.domain.numbers.UserNumbers;
+import baseball.domain.entity.count.Ball;
+import baseball.domain.entity.numbers.RandomNumbers;
+import baseball.domain.entity.numbers.UserNumbers;
 import java.util.Arrays;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.DisplayName;

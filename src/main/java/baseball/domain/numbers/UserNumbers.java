@@ -8,8 +8,8 @@ public class UserNumbers implements Numbers {
     private String inputNumbers;
 
     public UserNumbers(String inputNumbers) {
-        this.userNumbers = generateNumbers();
         this.inputNumbers = inputNumbers;
+        this.userNumbers = generateNumbers();
     }
 
     // for test-code and encapsulation

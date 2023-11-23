@@ -30,7 +30,7 @@ public class StrikeTest {
             UserNumbers userNumbers = new UserNumbers(caseString);
 
             Strike strike = new Strike(userNumbers, randomNumbers);
-            assertThat(strike.getCount()).isEqualTo(0);
+            assertThat(strike.calculateCount().getStrike()).isEqualTo(0);
         }
     }
 
@@ -43,7 +43,7 @@ public class StrikeTest {
             UserNumbers userNumbers = new UserNumbers(caseString);
 
             Strike strike = new Strike(userNumbers, randomNumbers);
-            assertThat(strike.getCount()).isEqualTo(1);
+            assertThat(strike.calculateCount().getStrike()).isEqualTo(1);
         }
     }
 
@@ -56,7 +56,7 @@ public class StrikeTest {
             UserNumbers userNumbers = new UserNumbers(caseString);
 
             Strike strike = new Strike(userNumbers, randomNumbers);
-            assertThat(strike.getCount()).isEqualTo(2);
+            assertThat(strike.calculateCount().getStrike()).isEqualTo(2);
         }
     }
 
@@ -68,7 +68,7 @@ public class StrikeTest {
         UserNumbers userNumbers = new UserNumbers(caseString);
 
         Strike strike = new Strike(userNumbers, randomNumbers);
-        assertThat(strike.getCount()).isEqualTo(3);
+        assertThat(strike.calculateCount().getStrike()).isEqualTo(3);
 
     }
 }

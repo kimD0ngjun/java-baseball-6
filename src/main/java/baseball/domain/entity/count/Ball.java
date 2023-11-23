@@ -1,27 +1,26 @@
 package baseball.domain.entity.count;
 
+import baseball.domain.dto.CountDto;
 import baseball.domain.entity.numbers.Numbers;
 import java.util.List;
 
 public class Ball implements Counter {
-    private int count;
     private List<Integer> userNumbers;
     private List<Integer> randomNumbers;
 
     public Ball(Numbers userNumbers, Numbers randomNumbers) {
         this.userNumbers = userNumbers.getNumbers();
         this.randomNumbers = randomNumbers.getNumbers();
-        this.count = calculateCount();
     }
 
-    // for test-code and encapsulation
-    @Override
-    public int getCount() {
-        return count;
-    }
+//    // for test-code and encapsulation
+//    @Override
+//    public int getCount() {
+//        return count;
+//    }
 
     @Override
-    public int calculateCount() {
+    public CountDto calculateCount() {
         int count = 0;
 
         for (int i = 0; i < randomNumbers.size(); i++) {
@@ -31,6 +30,6 @@ public class Ball implements Counter {
             }
         }
 
-        return count;
+        return new CountDto(count, 0);
     }
 }

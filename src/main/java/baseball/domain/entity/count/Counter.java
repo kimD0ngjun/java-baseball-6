@@ -1,7 +1,9 @@
 package baseball.domain.entity.count;
 
-public interface Counter {
-    int getCount();
+import baseball.domain.dto.CountDto;
 
-    int calculateCount();
+public interface Counter {
+//    int getCount();
+
+    CountDto calculateCount();
 }

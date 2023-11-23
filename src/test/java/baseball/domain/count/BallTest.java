@@ -30,7 +30,7 @@ public class BallTest {
             UserNumbers userNumbers = new UserNumbers(caseString);
 
             Ball ball = new Ball(userNumbers, randomNumbers);
-            assertThat(ball.getCount()).isEqualTo(0);
+            assertThat(ball.calculateCount().getBall()).isEqualTo(0);
         }
     }
 
@@ -43,7 +43,7 @@ public class BallTest {
             UserNumbers userNumbers = new UserNumbers(caseString);
 
             Ball ball = new Ball(userNumbers, randomNumbers);
-            assertThat(ball.getCount()).isEqualTo(1);
+            assertThat(ball.calculateCount().getBall()).isEqualTo(1);
         }
     }
 
@@ -56,7 +56,7 @@ public class BallTest {
             UserNumbers userNumbers = new UserNumbers(caseString);
 
             Ball ball = new Ball(userNumbers, randomNumbers);
-            assertThat(ball.getCount()).isEqualTo(2);
+            assertThat(ball.calculateCount().getBall()).isEqualTo(2);
         }
     }
 
@@ -69,7 +69,7 @@ public class BallTest {
             UserNumbers userNumbers = new UserNumbers(caseString);
 
             Ball ball = new Ball(userNumbers, randomNumbers);
-            assertThat(ball.getCount()).isEqualTo(3);
+            assertThat(ball.calculateCount().getBall()).isEqualTo(3);
         }
     }
 }

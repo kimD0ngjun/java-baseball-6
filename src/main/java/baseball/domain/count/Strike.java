@@ -1,7 +1,6 @@
 package baseball.domain.count;
 
-import baseball.domain.numbers.RandomNumbers;
-import baseball.domain.numbers.UserNumbers;
+import baseball.domain.numbers.Numbers;
 import java.util.List;
 
 public class Strike implements Counter {
@@ -9,7 +8,7 @@ public class Strike implements Counter {
     private List<Integer> userNumbers;
     private List<Integer> randomNumbers;
 
-    public Strike(UserNumbers userNumbers, RandomNumbers randomNumbers) {
+    public Strike(Numbers userNumbers, Numbers randomNumbers) {
         this.userNumbers = userNumbers.getNumbers();
         this.randomNumbers = randomNumbers.getNumbers();
         this.count = calculateCount();

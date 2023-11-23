@@ -1,7 +1,6 @@
 package baseball.domain.count;
 
-import baseball.domain.numbers.RandomNumbers;
-import baseball.domain.numbers.UserNumbers;
+import baseball.domain.numbers.Numbers;
 import java.util.List;
 
 public class Ball implements Counter {
@@ -9,12 +8,13 @@ public class Ball implements Counter {
     private List<Integer> userNumbers;
     private List<Integer> randomNumbers;
 
-    public Ball(UserNumbers userNumbers, RandomNumbers randomNumbers) {
+    public Ball(Numbers userNumbers, Numbers randomNumbers) {
         this.userNumbers = userNumbers.getNumbers();
         this.randomNumbers = randomNumbers.getNumbers();
         this.count = calculateCount();
     }
 
+    // for test-code and encapsulation
     @Override
     public int getCount() {
         return count;

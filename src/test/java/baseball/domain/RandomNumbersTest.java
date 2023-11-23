@@ -15,7 +15,7 @@ public class RandomNumbersTest {
     @BeforeAll
     static void setUp() {
         RandomNumbers randomNumbers = new RandomNumbers();
-        testRandomNumbers = randomNumbers.getRandomNumbers();
+        testRandomNumbers = randomNumbers.getNumbers();
     }
 
     @DisplayName("난수는 총 세 자리다.")

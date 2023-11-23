@@ -17,7 +17,7 @@ public class StrikeTest {
     @BeforeAll
     static void setUp() {
         randomNumbers = mock(RandomNumbers.class);
-        when(randomNumbers.getRandomNumbers()).thenReturn(Arrays.asList(1, 2, 3));
+        when(randomNumbers.getNumbers()).thenReturn(Arrays.asList(1, 2, 3));
     }
 
     @DisplayName("0개의 스트라이크 카운트 케이스")

@@ -10,8 +10,8 @@ public class Ball implements Counter {
     private List<Integer> randomNumbers;
 
     public Ball(UserNumbers userNumbers, RandomNumbers randomNumbers) {
-        this.userNumbers = userNumbers.getUserNumbers();
-        this.randomNumbers = randomNumbers.getRandomNumbers();
+        this.userNumbers = userNumbers.getNumbers();
+        this.randomNumbers = randomNumbers.getNumbers();
         this.count = calculateCount();
     }
 

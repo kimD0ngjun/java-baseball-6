@@ -10,8 +10,8 @@ public class Strike implements Counter {
     private List<Integer> randomNumbers;
 
     public Strike(UserNumbers userNumbers, RandomNumbers randomNumbers) {
-        this.userNumbers = userNumbers.getUserNumbers();
-        this.randomNumbers = randomNumbers.getRandomNumbers();
+        this.userNumbers = userNumbers.getNumbers();
+        this.randomNumbers = randomNumbers.getNumbers();
         this.count = calculateCount();
     }
 

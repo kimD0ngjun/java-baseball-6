@@ -20,6 +20,6 @@ public class UserNumbersTest {
         testList.add(2);
         testList.add(3);
 
-        assertThat(testUserNumbers.getUserNumbers()).isEqualTo(testList);
+        assertThat(testUserNumbers.getNumbers()).isEqualTo(testList);
     }
 }

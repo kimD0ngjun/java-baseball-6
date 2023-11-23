@@ -3,15 +3,23 @@ package baseball.domain.numbers;
 import baseball.service.UserNumbersConverter;
 import java.util.List;
 
-public class UserNumbers {
+public class UserNumbers implements Numbers {
     private final List<Integer> userNumbers;
+    private String inputNumbers;
 
-    public UserNumbers(String inputNumber) {
-        this.userNumbers = UserNumbersConverter.changeType(inputNumber);
+    public UserNumbers(String inputNumbers) {
+        this.userNumbers = generateNumbers();
+        this.inputNumbers = inputNumbers;
     }
 
     // for test-code and encapsulation
-    public List<Integer> getUserNumbers() {
+    @Override
+    public List<Integer> getNumbers() {
         return userNumbers;
+    }
+
+    @Override
+    public List<Integer> generateNumbers() {
+        return UserNumbersConverter.changeType(inputNumbers);
     }
 }

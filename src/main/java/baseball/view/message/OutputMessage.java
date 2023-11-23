@@ -1,6 +1,7 @@
 package baseball.view.message;
 
 public enum OutputMessage {
+    Nothing("낫싱"),
     BALL("%d볼"),
     STRIKE("%d스트라이크"),
     BALL_STRIKE("%d볼 %d스트라이크");
@@ -9,6 +10,10 @@ public enum OutputMessage {
 
     OutputMessage(String message) {
         this.message = message;
+    }
+
+    public String getMessage() {
+        return message;
     }
 
     public String getMessage(int count) {

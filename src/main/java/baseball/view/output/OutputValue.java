@@ -17,14 +17,20 @@ public class OutputValue implements Output {
         outputBallStrike(ball, strike);
     }
 
+    private void outputNothing(int ball, int strike) {
+        if (strike == 0 && ball == 0) {
+            System.out.println(OutputMessage.Nothing.getMessage());
+        }
+    }
+
     private void outputBall(int ball, int strike) {
-        if (strike == 0) {
+        if (strike == 0 && ball != 0) {
             System.out.println(OutputMessage.BALL.getMessage(ball));
         }
     }
 
     private void outputStrike(int ball, int strike) {
-        if (ball == 0) {
+        if (ball == 0 && strike != 0) {
             System.out.println(OutputMessage.STRIKE.getMessage(strike));
         }
     }

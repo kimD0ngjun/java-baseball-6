@@ -8,6 +8,7 @@ import baseball.domain.entity.numbers.RandomNumbers;
 import baseball.domain.entity.numbers.UserNumbers;
 import baseball.view.input.Answer;
 import baseball.view.input.Input;
+import baseball.view.input.Progress;
 import baseball.view.message.GuideMessage;
 import baseball.view.output.Output;
 import baseball.view.output.OutputValue;
@@ -15,26 +16,33 @@ import baseball.view.output.OutputValue;
 public class EventAssembler {
     private int ballCount;
     private int strikeCount;
+    private int progressNumber;
 
     public void startBaseball() {
         System.out.println(GuideMessage.START_MESSAGE.getMessage());
 
-        RandomNumbers randomNumbers = new RandomNumbers();
-
         do {
-            Input answer = new Answer();
-            UserNumbers userNumbers = new UserNumbers(answer.inputValue());
 
-            Count ball = new Ball(userNumbers, randomNumbers);
-            Count strike = new Strike(userNumbers, randomNumbers);
+            RandomNumbers randomNumbers = new RandomNumbers();
 
-            ballCount = ball.calculateCount().getBall();
-            strikeCount = strike.calculateCount().getStrike();
+            do {
+                Input answer = new Answer();
+                UserNumbers userNumbers = new UserNumbers(answer.inputValue());
 
-            CountDto dto = new CountDto(ballCount, strikeCount);
+                Count ball = new Ball(userNumbers, randomNumbers);
+                Count strike = new Strike(userNumbers, randomNumbers);
 
-            Output output = new OutputValue();
-            output.outputCount(dto);
-        } while (strikeCount != 3);
+                ballCount = ball.calculateCount().getBall();
+                strikeCount = strike.calculateCount().getStrike();
+
+                CountDto dto = new CountDto(ballCount, strikeCount);
+
+                Output output = new OutputValue();
+                output.outputCount(dto);
+            } while (strikeCount != 3);
+
+            Input progress = new Progress();
+            progressNumber = Integer.parseInt(progress.inputValue());
+        } while (progressNumber != 2);
     }
 }

@@ -22,7 +22,7 @@ public class UserNumbersValidatorTest {
         String[] wrongCases = {"12", "1234", "1"};
 
         for (String wrongCase : wrongCases) {
-            assertThatThrownBy(() -> UserNumbersValidator.validate(wrongCase));
+            assertThatThrownBy(() -> UserNumbersValidator.checkLength(wrongCase));
         }
     }
 
